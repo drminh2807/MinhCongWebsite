@@ -281,11 +281,12 @@ $SanPhamCungLoai = SanPhamCungLoai(1,$idLoai,$idSP);
         <td colspan="3" align="center" background="img/tieu.png" bgcolor="#0A5E3D" class="style3 style5 tdsp" id="tdsp2"><span class="style6">SẢN PHẨM  CÙNG LOẠI </span></td>
       </tr>
       <tr>
-        <td width="33%" align="center" class="tdsp" id="tdsp"><span class="style3">HTC HERO</span><br />
-            <img src="sanpham/camera.png" height="128" /><br />
-            <br />
-            <span class="style5">Gía : 8,999,000 VNĐ</span><br />
-          <a href="http://quyencamera.webdoanhnghiep.org/trangchu.php?p=chitietsp&amp;idSP=527&amp;idLoai=41"></a><a href="http://quyencamera.webdoanhnghiep.org/trangchu.php?p=chitietsp&amp;idSP=527&amp;idLoai=41"><img src="img/chitiet.png" width="70" height="25" border="0" /></a></td>
+        <?php while($row_spcungloai=mysql_fetch_array($SanPhamCungLoai)) { ?>
+        <td width="33%" align="center" class="tdsp" id="tdsp"><span class="style3"><?php echo $row_spcungloai['TenSP'] ;?></span><br /> <br />
+            <img src="upload/sanpham/hinhchinh/<?php echo $row_spcungloai['UrlHinh'] ?>" width="70" height="70" border="0" /><br /><br />
+            <span class="style5"><?php echo number_format($row_spcungloai['Gia'],2);?></span><br />
+          <a href=""></a><a href="index.php?page=ChiTietSP&idSP=<?php echo $row_spcungloai['idSP']; ?>"><img src="img/chitiet.png" width="70" height="25" border="0" /></a></td>
+        <?php } ?>
       </tr>
     </tbody>
   </table>

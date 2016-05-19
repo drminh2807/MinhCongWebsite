@@ -1,3 +1,7 @@
+<?php 
+ob_start();
+session_start();
+ ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -5,7 +9,41 @@
 <title>MINH CONG Mobile</title>
 <link href="css/css1.css" rel="stylesheet" type="text/css" />
 <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"></script>
-
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript">
+  var url="chonsp.php";
+  $(document).ready(function() {
+    $(".dathang").click(function()){
+      idSP = $(this).attr("isSP");
+      data = 'action=add&idSP='+idSP;
+      $("#loadgiohang").load(url,data,xuly);
+    } )
+    $(".capnhatsoluong").click(function(){
+      var idSP = $(this).attr("idSP");
+      var soluong = $(this).parent().find('#soluong').val();
+      var data = 'action=update&idSP='+idSP+'&soluong='+soluong;
+      $("#loadgiohang").load(url,data,xuly);
+    })
+    $(".removesp").click(function(){
+      var idSP = $(this).attr("idSP");
+      var data = 'idSP'+idSP+'&soluong=-1';
+      $("#loadgiohang").load(url,data,xuly);
+    })
+    function xuly(responseText, textStatus, XMLHttpRequest){
+      $(".capnhatsoluong").click(function(){
+      var idSP = $(this).attr("idSP");
+      var soluong = $(this).parent().find('#soluong').val();
+      var data = 'action=update'+'&idSP'+idSP+'&soluong='+soluong;
+      $("#loadgiohang").load(url,data,xuly);
+    })
+      $(".removesp").click(function(){
+      var idSP = $(this).attr("idSP");
+      var data = 'idSP'+idSP+'&soluong=-1';
+      $("#loadgiohang").load(url,data,xuly);
+    })
+  } 
+}
+</script>
 <script type="text/javascript" src="stickytooltip.js"></script>
 
 <link rel="stylesheet" type="text/css" href="stickytooltip.css" />
@@ -13,6 +51,25 @@
 <?php
   require_once('db.php');
   require_once('function.php');
+  if(isset($_POST['login']) == true){
+    $username = $_POST['u'];
+    $password = md5($_POST['p']);
+    if (get_magic_quotes_gpc() == false) {
+      $username = trim(mysql_real_escape_string($username));
+      $password = trim(mysql_real_escape_string($password));
+      $sql = "SELECT * FROM users WHERE username = '$username' AND password = '$password'";
+      $user = mysql_query($sql);
+      if(mysql_num_rows($user) == 1){
+        $row_user = mysql_fetch_assoc($user);
+        $_SESSION['kt_login_id'] = $row_user['idUser'];
+        $_SESSION['kt_login_user'] = $row_user['Username'];
+        $_SESSION['kt_login_level'] = $row_user['idGroup'];
+        $_SESSION['kt_HoTen'] = $row_user['HoTen'];
+        $_SESSION['kt_GioiTinh'] = $row_user['GioiTinh'];
+        header("location:index.php");
+      }
+    }
+  }
  ?>
 <body>
 
@@ -124,7 +181,7 @@ http://www.skype.com/go/skypebuttons
                     <!-- ĐĂNG NHẬP -->
                	<div id="dangnhap">
                   <div></div>
-                        <fieldset> <form action="#" method="get" name="dangnhap" id="dangnhap">
+                        <fieldset> <form action="#" method="post" name="dangnhap" id="dangnhap">
                           <label><span class="text"><em>Username 
                           </em></span>
                           <input onclick="if (this.value=='... Nhập Username ...') value=''" onblur="if (this.value=='')value='... Nhập Username ...'"  name="u" type="text" class="field" id="u" value="... Nhập Username ..." />
@@ -148,7 +205,8 @@ http://www.skype.com/go/skypebuttons
                   <!-- GIỎ HÀNG -->
                   <div id="giohang">
                     <div></div>
-                        <fieldset>
+                        <fieldset id="loadgiohang">
+                        <?php require_once('hiengiohang.php') ?>
                         Hiện có <span class="text">0</span> sản phẩm 
                     </fieldset>
                 </div>
