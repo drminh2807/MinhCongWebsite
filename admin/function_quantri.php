@@ -1,3 +1,4 @@
+<!-- function -->
 <?php
 function DanhSachSanPham()  
 {  
