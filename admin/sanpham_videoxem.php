@@ -27,7 +27,7 @@ $Video=DanhSachVideo();
 <body>
 <table width="950" border="1" align="center"> 
   <tr bgcolor="#0000FF"> 
-    <th colspan="9" align="center" scope="col"><span class="style1">DANH SÁCH SẢN PHẨM COMMENTID</span></th> 
+    <th colspan="9" align="center" scope="col"><span class="style1">DANH SÁCH VIDEO SẢN PHẨM</span></th> 
   </tr> 
   <tr align="center" class="style2"> 
     <td width="170" height="46">IDYOUTUBE</td> 
