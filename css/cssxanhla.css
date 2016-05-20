@@ -1,0 +1,192 @@
+@charset "utf-8";
+
+
+body {
+	text-align: center;
+	background-image: url(../img/body.png);
+	background-attachment: fixed;
+	color: #990000;
+}
+#total {
+	text-align: center;
+	margin: auto;
+	width: 960px;
+	background-repeat: repeat;
+}
+#left {
+	float: left;
+	width: 195px;
+	margin-left: 5px;
+}
+#slide {
+	background-color: #FFFFFF;
+	height: 315px;
+	margin-top: 5px;
+}
+
+#center {
+	float: left;
+	width: 560px;
+	background-image: url(../img/cen.png);
+}
+#link {
+	clear: both;
+	height: 30px;
+	width: 960px;
+	font-weight: bold;
+	color: #006600;
+}
+
+
+#content {
+	width: 960px;
+	background-image: url(../img/cen.png);
+	min-height: 1000px;
+	float: left;
+}
+
+#tong {
+	width: 960px;
+}
+#banner {
+	height: 90px;
+	width: 960px;
+	background-image: url(../img/top.png);
+	padding-top: 10px;
+	text-align: center;
+}
+#menu {
+	height: 33px;
+	width: 930px;
+	background-image: url(../Blue_version/css/menuxoan/menu_bg1.gif);
+	margin-left: 5px;
+	margin-right: 5px;
+}
+#footer {
+	background-image: url(../img/bot.png);
+	height: 120px;
+	width: 960px;
+	clear: both;
+	text-align: center;
+	color: #006600;
+	background-repeat: no-repeat;
+}
+#hotro div {
+	background-image: url(../img/hotro.png);
+	height: 30px;
+	width: 200px;
+}
+#hotro {
+}
+#dangnhap div {
+	background-image: url(../Blue_version/img/DANGNHAP.png);
+	height: 30px;
+	width: 200px;
+}
+fieldset  {
+	border: 1px solid #04457D;
+}
+
+
+#right {
+	float: left;
+	width: 195px;
+	margin-right: 5px;
+}
+#sanpham {
+	background-color: #FFFFFF;
+}
+
+#giohang div {
+	background-image: url(../img/giohang.png);
+	height: 30px;
+	width: 200px;
+}
+#timkiem div {
+	background-image: url(../img/timkiem.png);
+	height: 30px;
+	width: 200px;
+}
+#timkiem {
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+	border-bottom-color: #006600;
+}
+#truycap div {
+	background-image: url(../img/truycap.png);
+	height: 30px;
+	width: 200px;
+}
+#tintuc div {
+	background-image: url(../Blue_version/img/tintuc.png);
+	height: 30px;
+	width: 200px;
+}
+.atin   {
+	font-size: 12px;
+	font-style: italic;
+	font-weight: bold;
+	color: #04457D;
+}
+#tintuc #tin {
+	height: 300px;
+	text-align: left;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+	border-bottom-color: #990000;
+}
+#noidung {
+	text-align: center;
+	margin: auto;
+	width: 960px;
+	background-image: url(../Blue_version/img/cen.png);
+}
+#giaohang div {
+	background-image: url(../img/giaohang.png);
+	height: 30px;
+	width: 200px;
+}
+#tintuc {
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+	border-bottom-color: #04457D;
+}
+#giaohang {
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+	border-bottom-color: #006600;
+}
+.tdsp   {
+	border: 1px dotted #04457D;
+}
+#hotrokh div {
+	background-image: url(../img/hotroKH_xanh.png);
+	height: 30px;
+	width: 200px;
+}
+#htkh a:link {
+	font-weight: bold;
+	color: #006600;
+	text-decoration: none;
+}
+#htkh a:visited {
+	font-weight: bold;
+	color: #006600;
+	text-decoration: none;
+}
+#htkh a:hover {
+	font-weight: bold;
+	color: #99FF66;
+	text-decoration: none;
+	font-style: italic;
+}
+#dichvuhotro div {
+	background-image: url(../img/dichvuhotro_xanh.png);
+	height: 30px;
+	width: 200px;
+}
+#hangsx div {
+	background-image: url(../img/hangSX_xanh.png);
+	height: 30px;
+	width: 200px;
+}

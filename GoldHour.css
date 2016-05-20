@@ -1,0 +1,81 @@
+﻿.foot
+{
+	clear: both;
+}
+.content
+{
+	
+	margin-left: 5px;
+}
+
+.chuyende
+{
+	position: fixed;
+	bottom: -1px;
+	right: 5px;
+}
+
+.chuyende .content
+{
+	position: relative;
+	width: 286px;
+	height: 159px;
+}
+
+.chuyende .content .lefthour
+{
+	position: relative;
+	float: left;
+	font-size: 20px;
+	font-weight: bold;
+	top: 85px;
+	left: 149px;
+}
+
+.chuyende .content .leftminute
+{
+	position: relative;
+	float: left;
+	top: 85px;
+	left: 167px;
+	font-size: 20px;
+	font-weight: bold;
+}
+
+.chuyende .tenchuyende
+{
+	font-size: 12px;
+	text-align: center;
+	width: 285px;
+	font-weight: bold;
+	font-family: Tahoma;
+	color:#FFFFFF
+	height: 15px;
+	cursor: pointer;
+}
+
+.chuyende .tenchuyende .nut
+{
+	background-image: url('button.gif');
+	background-position: -30px 0;
+	height: 15px;
+	width: 30px;
+}
+
+.chuyende .tenchuyende .NutHien
+{
+	background-image: url('button.gif');
+	background-position: -60px 0;
+	height: 15px;
+	width: 30px;
+}
+.chuyende .content .leftsecond
+{
+	position: relative;
+	float: left;
+	top: 85px;
+	left: 185px;
+	font-size: 20px;
+	font-weight: bold;
+}
+#divchuyende{color:#FFFFFF}

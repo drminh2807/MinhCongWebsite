@@ -1,0 +1,16 @@
+img {border:none;}
+
+a {
+	color: #FFFF00;
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+
+a:focus
+{
+ outline-style: none;
+}

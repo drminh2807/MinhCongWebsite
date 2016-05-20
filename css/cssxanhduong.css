@@ -1,0 +1,203 @@
+@charset "utf-8";
+
+
+.group_fl  {
+	float: left;
+	width: 15%;
+	text-align: left;
+	padding-left: 30px;
+}
+.group-link {
+	font-weight: bold;
+}
+
+
+body {
+	text-align: center;
+	background-image: url(../Blue_version/img/body.png);
+	background-attachment: fixed;
+	color: #04457D;
+}
+#total {
+	text-align: center;
+	margin: auto;
+	width: 960px;
+	background-repeat: repeat;
+}
+#left {
+	float: left;
+	width: 195px;
+	margin-left: 5px;
+}
+#slide {
+	background-color: #FFFFFF;
+	height: 315px;
+	margin-top: 5px;
+}
+
+#center {
+	float: left;
+	width: 560px;
+	background-color: #FFFFFF;
+}
+#link {
+	clear: both;
+	height: 30px;
+	width: 960px;
+	font-weight: bold;
+	color: #04457D;
+}
+
+
+#content {
+	height: 1000px;
+	width: 960px;
+}
+
+#tong {
+	width: 960px;
+}
+#banner {
+	height: 90px;
+	width: 960px;
+	background-image: url(../Blue_version/img/top.png);
+	padding-top: 10px;
+	text-align: center;
+}
+#menu {
+	height: 33px;
+	width: 930px;
+	background-image: url(../Blue_version/css/menuxoan/menu_bg1.gif);
+	margin-left: 5px;
+	margin-right: 5px;
+}
+#footer {
+	background-image: url(../Blue_version/img/bot.png);
+	height: 120px;
+	width: 960px;
+	clear: both;
+	text-align: center;
+	color: #04457D;
+	background-repeat: no-repeat;
+}
+#hotro div {
+	background-image: url(../Blue_version/img/hotro.png);
+	height: 30px;
+	width: 200px;
+}
+#hotro {
+}
+#dangnhap div {
+	background-image: url(../Blue_version/img/DANGNHAP.png);
+	height: 30px;
+	width: 200px;
+}
+fieldset  {
+	border: 1px solid #04457D;
+}
+
+
+#right {
+	float: left;
+	height: 1000px;
+	width: 195px;
+	margin-right: 5px;
+}
+#sanpham {
+	background-color: #FFFFFF;
+}
+
+#giohang div {
+	background-image: url(../Blue_version/img/giohang.png);
+	height: 30px;
+	width: 200px;
+}
+#timkiem div {
+	background-image: url(../Blue_version/img/timkiem.png);
+	height: 30px;
+	width: 200px;
+}
+#timkiem {
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+	border-bottom-color: #990000;
+}
+#truycap div {
+	background-image: url(../Blue_version/img/truycap.png);
+	height: 30px;
+	width: 200px;
+}
+#tintuc div {
+	background-image: url(../Blue_version/img/tintuc.png);
+	height: 30px;
+	width: 200px;
+}
+.atin   {
+	font-size: 12px;
+	font-style: italic;
+	font-weight: bold;
+	color: #04457D;
+}
+#tintuc #tin {
+	height: 300px;
+	text-align: left;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+	border-bottom-color: #990000;
+}
+#noidung {
+	text-align: center;
+	margin: auto;
+	width: 960px;
+	background-image: url(../Blue_version/img/cen.png);
+	background-repeat: repeat;
+}
+#giaohang div {
+	background-image: url(../Blue_version/img/giaohang.png);
+	height: 30px;
+	width: 200px;
+}
+#tintuc {
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+	border-bottom-color: #04457D;
+}
+#giaohang {
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+	border-bottom-color: #04457D;
+}
+.tdsp   {
+	border: 1px dotted #04457D;
+}
+#hotrokh div {
+	background-image: url(../Blue_version/img/hotroKH.png);
+	height: 30px;
+	width: 200px;
+}
+#htkh a:link {
+	font-weight: bold;
+	color: #0066FF;
+	text-decoration: none;
+}
+#htkh a:visited {
+	font-weight: bold;
+	color: #0066FF;
+	text-decoration: none;
+}
+#htkh a:hover {
+	font-weight: bold;
+	color: #0066FF;
+	text-decoration: none;
+	font-style: italic;
+}
+#dichvuhotro div {
+	background-image: url(../img/dichvuhotro.png);
+	height: 30px;
+	width: 200px;
+}
+#hangsx div {
+	background-image: url(../img/hangSX.png);
+	height: 30px;
+	width: 200px;
+}
