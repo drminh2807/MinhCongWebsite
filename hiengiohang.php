@@ -10,9 +10,9 @@
 		$tensp=current($_SESSION['dayTenSP']);
 		$soluong=current($_SESSION['daySoluong']);
 		$dongia=current($_SESSION['dayDongia']);
-		$tongsoluong+=$soluong;			
-		$tien=$dongia*$soluong;
-		$tongtien+=$tien; ?>
+		$tongsoluong = isset($tongsoluong) ? $tongsoluong + $soluong : $soluong;			
+		$tien = $dongia*$soluong;
+		$tongtien = isset($tongtien) ? $tongtien + $tien : $tien; ?>
 		<tr>
 	 	<td class="padding_giohang"><?php echo $tensp; ?></td>
 		<td class="padding_giohang">
@@ -34,8 +34,8 @@
  	<?php } ?>
 	 <tr>
 	 <td class="tongket">TỔNG TIỀN</td>
-	 <td class="tongket"><?php echo $tongsoluong;?>&nbsp;</td>
-	 <td class="tongket"><?php echo $tongtien?>&nbsp;</td>
+	 <td class="tongket"><?php $tsl = isset($tongsoluong) ? $tongsoluong : '0'; echo $tsl?>&nbsp;</td>
+	 <td class="tongket"><?php $tt = isset($tongtien) ? $tongtien : '0';  echo $tt?>&nbsp;</td>
 	 </tr>
  <?php } ?>
 

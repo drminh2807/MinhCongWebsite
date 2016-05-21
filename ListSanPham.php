@@ -21,7 +21,7 @@ $SPToolTipSV = SPCacCap(1,6,0,5000000);
           <img src="upload/sanpham/hinhchinh/<?php echo $row_sp['UrlHinh'] ?>" width="70" height="70" border="0" /></a><br />
           <img src="img/new.gif" width="29" height="19" /><br />
         Gía : <span class="text"><?php echo number_format($row_sp['Gia'],2); ?></span> VNĐ<br />
-        <a href="#"><img border="0"  src="img/chitiet.png" width="70" height="25" /><img border="0" class="dathang" idSP="<?php echo $row_sp['idSP'];?>"  src="img/mua.png" width="70" height="25" /></a></td>
+        <a href="javascript:void(0)"><img border="0"  src="img/chitiet.png" width="70" height="25" /><img border="0" class="dathang" idSP="<?php echo $row_sp['idSP'];?>"  src="img/mua.png" width="70" height="25" /></a></td>
         <?php if($dem==3) echo "</tr><tr>"; ?>
         <?php } ?>
     </tr>
