@@ -1,9 +1,9 @@
 <?php
- if(isset($_POST['btnMua'])){
-     ThemDonHang();
-	 LuuDonHangChiTiet();  
-      header("location:index.php?page=muahangxong");
-	  }
+if(isset($_POST['btnMua'])){
+  ThemDonHang();
+  LuuDonHangChiTiet();  
+  header("location:index.php?page=muahangxong");
+}
 ?>
 <form id="form1" name="form1" method="post" action="">
 
@@ -13,23 +13,23 @@
     </caption>
     <tr>
       <th scope="col">TenNguoiNhan</th>
-      <th align="left" scope="col"><input name="TenNguoiNhan" type="text" id="TenNguoiNhan" value="<? echo $_SESSION['kt_HoTen']; ?>" /></th>
+      <th align="left" scope="col"><input name="TenNguoiNhan" type="text" id="TenNguoiNhan" value="<?php if(isset($_SESSION['kt_HoTen'])) echo $_SESSION['kt_HoTen']; else echo ''?>" /></th>
     </tr>
 
     <tr>
-      <td>ThoiDiemGiaoHang</td>
+      <td>Thời điểm giao hàng</td>
       <td align="left"><input type="text" name="ThoiDiemGiaoHang" id="ThoiDiemGiaoHang" /></td>
     </tr>
     <tr>
-      <td>DiaDiemGiaoHang</td>
+      <td>Địa điểm giao hàng</td>
       <td align="left"><input type="text" name="DiaDiemGiaoHang" id="DiaDiemGiaoHang" /></td>
     </tr>
     <tr>
-      <td>GhiChu</td>
+      <td>Ghi chú</td>
       <td align="left"><input type="text" name="GhiChu" id="GhiChu" /></td>
     </tr>
     <tr>
-      <td>TinhTrang</td>
+      <td>Tình trạng</td>
       <td align="left"><label>
         <input type="text" name="TinhTrang" id="TinhTrang" />
       </label></td>
@@ -37,13 +37,13 @@
   </table>
   <p>
     <label>
-    <input type="submit" name="btnMua" id="btnMua" value="MuaHang" />
+      <input type="submit" name="btnMua" id="btnMua" value="MuaHang" />
     </label>
-</p>
+  </p>
   <p>
-    <input name="idUser" type="hidden" id="idUser" value="<? echo $_SESSION['kt_login_id'];?>" />
+    <input name="idUser" type="hidden" id="idUser" value="<?php echo $_SESSION['kt_login_id'];?>" />
     <input name="ThoiDiemDatHang" type="hidden" id="ThoiDiemDatHang" value="<?php echo date('Y-m-d')?>" />
   </p>
 </form>
 <p><?php require_once('hiengiohang2.php'); ?>
-&nbsp;</p>
+  &nbsp;</p>

@@ -263,7 +263,9 @@ return mysql_query($qr);
 }
 function Admin_DangNhap($username, $password)  
 {
-    $qr="select * from users where username='".$username."' and password='".$password."' and idGroup='1' " ;
+	$username = trim(mysql_real_escape_string($username));
+    $password = trim(mysql_real_escape_string($password));
+    $qr="select * from users where username='$username' and password='$password' and idGroup='1' " ;
 	return mysql_query($qr);
 } 
 

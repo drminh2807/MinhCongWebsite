@@ -121,15 +121,25 @@ http://www.skype.com/go/skypebuttons
 
   if(isset($_GET['page'])){
     $page = $_GET['page'];
-    if($page == 'ChiTietSP'){
-      include"ChiTietSP.php";
-    }elseif($page == 'loaisp'){
-      include "LoaiSP.php";
+    switch ($page) {
+      case "ChiTietSP":
+        include"ChiTietSP.php";
+        break;
+      case "loaisp":
+        include"LoaiSP.php";
+        break;
+      case "muahang":
+        include"muahang.php";
+        break;
+      case "muahangxong":
+        include"muahangxong.php";
+        break;
+      default:
+        break;
     }
   }else{
     include "ListSanPham.php";
   }
-
   ?> 
 </div>
 
@@ -138,12 +148,12 @@ http://www.skype.com/go/skypebuttons
 
   <!-- ĐĂNG NHẬP -->
   <div id="dangnhap">
-  <div> </div>
-  <?php if(isset($_SESSION['kt_login_id'])){ ?>
-      <br> Chào mừng <span style="color=red"><?php echo $_SESSION['kt_HoTen']; ?></span>
-      <br><br><input type="submit" name ="logout" id="logout" value="Thoát"/> 
+    <div> </div>
+    <?php if(isset($_SESSION['kt_login_id'])){ ?>
+      <br> Chào mừng <span style="color:red"><?php echo $_SESSION['kt_HoTen']; ?></span>
+      <br><br><a style="color:blue" href='thoat.php'>Đăng xuất</a>
       <?php } else { ?>
-        
+
         <fieldset> <form action="" method="post" name="dangnhap" id="dangnhap">
           <label><span class="text"><em>Username 
           </em></span>
@@ -164,47 +174,46 @@ http://www.skype.com/go/skypebuttons
     <?php } ?>
     
 
-</div>
-<!-- //ĐĂNG NHẬP --> 
-<br />
-<!-- GIỎ HÀNG -->
-<div id="giohang">
-  <div></div>
-  <fieldset id="loadgiohang">
-    <?php require_once('hiengiohang.php') ?>
-    Hiện có <span class="text">0</span> sản phẩm 
-  </fieldset>
-</div>
-<!-- //GIỎ HÀNG -->
-<br />
-<!-- GIỎ HÀNG -->
-<div id="giaohang">
-  <div></div>
-  <span class="atin">Vui lòng gọi HOTLINE</span><br />
-  <img src="img/mobi.png" width="30" height="40" /><span class="text">0168 522 4746              </span></div>
+  </div>
+  <!-- //ĐĂNG NHẬP --> 
+  <br />
+  <!-- GIỎ HÀNG -->
+  <div id="giohang">
+    <div></div>
+    <fieldset id="loadgiohang">
+      <?php require_once('hiengiohang.php') ?>
+    </fieldset>
+  </div>
   <!-- //GIỎ HÀNG -->
   <br />
-  <!-- TIN TỨC -->
-  <div id="tintuc">
-    <div>  </div>
+  <!-- GIỎ HÀNG -->
+  <div id="giaohang">
+    <div></div>
+    <span class="atin">Vui lòng gọi HOTLINE</span><br />
+    <img src="img/mobi.png" width="30" height="40" /><span class="text">0168 522 4746              </span></div>
+    <!-- //GIỎ HÀNG -->
+    <br />
+    <!-- TIN TỨC -->
+    <div id="tintuc">
+      <div>  </div>
 
-    <span id="tin">
+      <span id="tin">
 
-      <p class="atin"><img src="img/staricon.gif" width="14" height="13" /> Steve Jobs bỏ Apple sau lưng</p>
-      <p class="atin"><img src="img/staricon.gif" width="14" height="13" /> 'Mổ xẻ' điện thoại Apple iPhone 4S</p>
-      <p class="atin"><img src="img/staricon.gif" width="14" height="13" /> Những laptop chạy Core i giá dưới 10 triệu </p>
-      <p class="atin"><img src="img/staricon.gif" width="14" height="13" /> Chất liệu Policarbonat cho Nokia N9</p>
-      <p class="atin"><img src="img/staricon.gif" width="14" height="13" /> Bkav công bố phần mềm diệt virus miễn phí trên di động </p>
-    </span>
+        <p class="atin"><img src="img/staricon.gif" width="14" height="13" /> Steve Jobs bỏ Apple sau lưng</p>
+        <p class="atin"><img src="img/staricon.gif" width="14" height="13" /> 'Mổ xẻ' điện thoại Apple iPhone 4S</p>
+        <p class="atin"><img src="img/staricon.gif" width="14" height="13" /> Những laptop chạy Core i giá dưới 10 triệu </p>
+        <p class="atin"><img src="img/staricon.gif" width="14" height="13" /> Chất liệu Policarbonat cho Nokia N9</p>
+        <p class="atin"><img src="img/staricon.gif" width="14" height="13" /> Bkav công bố phần mềm diệt virus miễn phí trên di động </p>
+      </span>
 
 
+
+
+    </div>
+    <!-- //TIN TỨC -->   
 
 
   </div>
-  <!-- //TIN TỨC -->   
-
-
-</div>
 
 </div>
 
@@ -217,8 +226,6 @@ http://www.skype.com/go/skypebuttons
 
 </div>
 <div id="footer"><br />
-  <p>Bản quyền &copy; 2011 bởi NhatNghe WEB-Group</p>
-  <p>Design by : <a href="http://vietmedia.info" target="_blank">www.vietmedia.info</a></p>
 </div>
 <!--HTML for the tooltips-->
 

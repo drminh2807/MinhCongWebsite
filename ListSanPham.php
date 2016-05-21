@@ -21,7 +21,8 @@ $SPToolTipSV = SPCacCap(1,6,0,5000000);
           <img src="upload/sanpham/hinhchinh/<?php echo $row_sp['UrlHinh'] ?>" width="70" height="70" border="0" /></a><br />
           <img src="img/new.gif" width="29" height="19" /><br />
         Gía : <span class="text"><?php echo number_format($row_sp['Gia'],2); ?></span> VNĐ<br />
-        <a href="javascript:void(0)"><img border="0"  src="img/chitiet.png" width="70" height="25" /><img border="0" class="dathang" idSP="<?php echo $row_sp['idSP'];?>"  src="img/mua.png" width="70" height="25" /></a></td>
+        <a href="index.php?page=ChiTietSP&idSP=<?php echo $row_spcaocap['idSP'] ?>"><img border="0"  src="img/chitiet.png" width="70" height="25" />
+        <a href="javascript:void(0)"><img border="0" class="dathang" idSP="<?php echo $row_sp['idSP'];?>"  src="img/mua.png" width="70" height="25" /></a></td>
         <?php if($dem==3) echo "</tr><tr>"; ?>
         <?php } ?>
     </tr>
@@ -51,8 +52,8 @@ $SPToolTipSV = SPCacCap(1,6,0,5000000);
       <td align="center"><?php echo $row_spcaocap['TenSP'] ?><br />
           <img src="upload/sanpham/hinhchinh/<?php echo $row_spcaocap['UrlHinh'] ?>" width="70" height="70" border="0" /></a><br />
         Gía : <span class="text"><?php echo number_format($row_spcaocap['Gia'],2) ?></span> VNĐ<br />
-        <a href="index.php?page=ChiTietSP&idSP=<?php echo $row_spcaocap['idSP'] ?>"><img border="0"  src="img/chitiet.png" width="70" height="25" />
-        <img border="0" class="dathang" idSP="<?php echo $row_sp['idSP'];?>"  src="img/mua.png" width="70" height="25" /></a></td>
+        <a href="index.php?page=ChiTietSP&idSP=<?php echo $row_spcaocap['idSP'] ?>"><img border="0"  src="img/chitiet.png" width="70" height="25" /></a>
+        <a href="javascript:void(0)"><img border="0" class="dathang" idSP="<?php echo $row_spcaocap['idSP'];?>"  src="img/mua.png" width="70" height="25" /></a></td>
       <?php if($dem==3) echo "</tr><tr>"; ?>
       <?php } ?>
     </tr>
@@ -66,8 +67,8 @@ $SPToolTipSV = SPCacCap(1,6,0,5000000);
       <td align="center"><?php echo $row_spsinhvien['TenSP'] ?><br />
           <img src="upload/sanpham/hinhchinh/<?php echo $row_spsinhvien['UrlHinh'] ?>" width="70" height="70" border="0" /></a><br />
         Gía : <span class="text"><?php echo number_format($row_spsinhvien['Gia'],2) ?></span> VNĐ<br />
-        <a href="index.php?page=ChiTietSP&idSP=<?php echo $row_spsinhvien['idSP'] ?>"><img border="0"  src="img/chitiet.png" width="70" height="25" />
-        <img border="0" class="dathang" idSP="<?php echo $row_sp['idSP'];?>"  src="img/mua.png" width="70" height="25" /></a></td>
+        <a href="index.php?page=ChiTietSP&idSP=<?php echo $row_spsinhvien['idSP'] ?>"><img border="0"  src="img/chitiet.png" width="70" height="25" /></a>
+        <a href="javascript:void(0)"><img border="0" class="dathang" idSP="<?php echo $row_spsinhvien['idSP'];?>"  src="img/mua.png" width="70" height="25" /></a></td></td>
       <?php if($dem==3) echo "</tr><tr>"; ?>
       <?php } ?>
     </tr>

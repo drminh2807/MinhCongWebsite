@@ -3,9 +3,10 @@ require_once('../db.php');
 require_once('function_quantri.php');
 session_start();
 if(isset($_POST['Submit'])){ 
-    $check = Admin_DangNhap($_POST['username'], $_POST['password']);
-    // echo  mysql_num_rows($check);
-    // $row = mysql_fetch_row($check);
+    $username = trim(mysql_real_escape_string($_POST['username']));
+    $password = trim(mysql_real_escape_string(md5($_POST['password'])));
+    $qr ="select * from users where username='$username' and password='$password' and idGroup='1' " ;
+    $check =  mysql_query($qr);
     if ( mysql_num_rows($check) >0 )	{
     	$row = mysql_fetch_assoc($check);
 		$_SESSION['username'] = $row['Username'];
