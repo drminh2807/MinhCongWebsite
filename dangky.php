@@ -1,18 +1,11 @@
-<?php
-if(isset($_POST['btnMua'])){
-  ThemDonHang();
-  LuuDonHangChiTiet();  
-  header("location:index.php?page=muahangxong");
-}
-?>
 <form id="form1" name="form1" method="post" action="">
 
   <table width="500" border="1" cellspacing="0" cellpadding="4">
     <caption>
-      THÔNG TIN MUA HÀNG
+      ĐĂNG KÝ THÀNH VIÊN
     </caption>
     <tr>
-      <th scope="col">Tên người nhận</th>
+      <th scope="col">ID Đăng Nhập</th>
       <th align="left" scope="col"><input name="TenNguoiNhan" type="text" id="TenNguoiNhan" value="<?php if(isset($_SESSION['kt_HoTen'])) echo $_SESSION['kt_HoTen']; else echo ''?>" /></th>
     </tr>
 
@@ -40,10 +33,3 @@ if(isset($_POST['btnMua'])){
       <input type="submit" name="btnMua" id="btnMua" value="MuaHang" />
     </label>
   </p>
-  <p>
-    <input name="idUser" type="hidden" id="idUser" value="<?php echo $_SESSION['kt_login_id'];?>" />
-    <input name="ThoiDiemDatHang" type="hidden" id="ThoiDiemDatHang" value="<?php echo date('Y-m-d')?>" />
-  </p>
-</form>
-<p><?php require_once('hiengiohang2.php'); ?>
-  &nbsp;</p>
