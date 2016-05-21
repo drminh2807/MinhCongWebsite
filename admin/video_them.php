@@ -7,7 +7,15 @@ require_once('function_quantri.php');
  <?php  
 if(isset($_POST['btnThem'])){ 
     Video_Them(); 
-    header("location:sanpham_videoxem.php"); 
+    $idSP=$_POST['idSP'];
+    $value= $_POST['value']; 
+    $stt = $_POST['stt']; 
+    $AnHien = $_POST['anhien']; 
+    echo $idSP; echo "<br />\n.";
+    echo $value; echo "<br />\n.";
+    echo $stt; echo "<br />\n.";
+    echo $AnHien; echo "<br />\n.";
+    // header("location:sanpham_videoxem.php"); 
 } 
 ?>
 
@@ -46,7 +54,7 @@ if(isset($_POST['btnThem'])){
     <tr>
       <td height="35" align="center">Value</td>
       <td align="left"><label>
-        <input type="text" name="value" id="value" />
+        <input type="text" name="value" id="value"  />
       </label></td>
     </tr>
     <tr>

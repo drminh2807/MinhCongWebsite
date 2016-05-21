@@ -73,12 +73,12 @@ header("location: sanpham_commentxem.php");
       <td align="center">Kiểm-Duyệt</td>
       <td align="left">
        
-          <input type="radio" name="kiemduyet" value="1" id="kiemduyet_1" <?php if($row_comment[kiem_duyet]==1) echo "checked=checked";  ?> />
+          <input type="radio" name="kiemduyet" value="1" id="kiemduyet_1" <?php if($row_comment['kiem_duyet']==1) echo "checked=checked";  ?> />
          
           Duyệt</label>
        
           <label>
-          <input type="radio" name="kiemduyet" value="0" id="kiemduyet_0" <?php if($row_comment[kiem_duyet]==0) echo "checked=checked";  ?> />
+          <input type="radio" name="kiemduyet" value="0" id="kiemduyet_0" <?php if($row_comment['kiem_duyet']==0) echo "checked=checked";  ?> />
            khong Duyệt</label>      </td>
     </tr>
     <tr>

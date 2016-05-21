@@ -17,7 +17,7 @@ function DanhSachComment()
 } 
 function DanhSachVideo()   
 {   
-    $qr = "select id_youtube,sanpham.TenSP,value,stt,sanpham_youtube.anhien from sanpham_youtube,sanpham where sanpham_youtube.idSP=sanpham.idSP";   
+    $qr = "select id_youtube,sanpham.TenSP,value,stt,sanpham_youtube.anhien,sanpham.idSP from sanpham_youtube,sanpham where sanpham_youtube.idSP=sanpham.idSP ORDER BY sanpham.tenSP ASC  ";   
     return mysql_query($qr); 
 } 
 function Video_Xoa($id_youtube)    
@@ -229,14 +229,15 @@ function Comment_ChiTiet($id_comment){
 function Video_Them() 
 { 
     $idSP=$_POST['idSP'];
-    $value= $_POST["value"]; 
-    $stt = $_POST["stt"]; 
-    $AnHien = $_POST["anhien"]; 
+    $value= $_POST['value']; 
+    $stt = $_POST['stt']; 
+    $AnHien = $_POST['anhien']; 
      
     settype($AnHien,"int"); 
     settype($stt,"int"); 
 	settype($idSP,"int"); 
-    $qr = "INSERT INTO sanpham_youtube VALUES(null, $idSP,'$value',$stt, $AnHien)"; 
+    $qr = "INSERT INTO sanpham_youtube VALUES(null, $idSP,'$value',null,$stt, $AnHien)"; 
+  
     mysql_query($qr);    
 } 
 
@@ -260,6 +261,10 @@ return mysql_query($qr);
 
 
 }
-
+function Admin_DangNhap($username, $password)  
+{
+    $qr="select * from users where username='".$username."' and password='".$password."' and idGroup='1' " ;
+	return mysql_query($qr);
+} 
 
 ?>
