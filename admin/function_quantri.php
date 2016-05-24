@@ -269,4 +269,21 @@ function Admin_DangNhap($username, $password)
 	return mysql_query($qr);
 } 
 
+   function DonHang(){
+   $sql=" select idDH,idUser,ThoiDiemDatHang,ThoiDiemGiaoHang,TenNguoiNhan,DiaDiemGiaoHang,TinhTrang,GhiChu from donhang order by tinhtrang ";
+  	
+   return mysql_query($sql);
+  }
+	function DonHang_chinh($idCL){
+	 // $ThuTu = $_POST["ThuTu"];
+	 $TT = $_POST['AnHien'];
+	
+	settype($TT,"int");
+	 $qr = "UPDATE donhang SET tinhtrang = '$TT' where idDH='$idCL' ";
+	mysql_query($qr);
+}
+function DonHang_Chitiet($idDH){
+	 $qr="select DonHangChitiet.*,sanpham.TenSP,sanpham.urlHinh from DonHangChitiet,sanpham where DonHangChitiet.idDH=75 and sanpham.idsp=donhangchitiet.idsp";
+	 return mysql_query($qr);
+}
 ?>
