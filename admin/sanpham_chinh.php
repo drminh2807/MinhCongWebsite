@@ -14,38 +14,39 @@ $row_sanpham= mysql_fetch_array($sanpham);
 if(isset($_POST["btnChinh"])) 
 {  
 
-    $result = ChinhSanPham($idSP); 
+    $result = ChinhSanPham($idSP);
+    // echo mysql_errno($result);
    header("location:#"); 
-  $idSP=$_GET['idSP'];
-  $TenSP = $_POST["TenSP"];
-  $idCL = $_POST["ChungLoai"];
-  $idLoai = $_POST["LoaiSP"];
-  $MoTa = $_POST["MoTa"];
-  $Gia = $_POST["Gia"];
-  $urlHinh = $_POST["urlHinh"];
-  $BaiViet = $_POST["BaiViet"];
-  $GhiChu = $_POST["GhiChu"];
-  $SoLuongTon = $_POST["SoLuongTon"];
-  $AnHien = $_POST["AnHien"];
-  $Ngay=$_POST["NgayCapNhat"];
-  $Ngay_arr = explode("/",$Ngay); // array(17,11,2010)
-    $d = $Ngay_arr[0]; //17
-    $m = $Ngay_arr[1]; //11
-    $y = $Ngay_arr[2]; //2010
-    if (checkdate($m,$d,$y)==false) $Ngay = date("Y-m-d");
-    else $Ngay = $y."-".$m."-".$d;
-    echo $idSP ; echo "<br />\n1";
-    echo $TenSP; echo "<br />\n2";
-    echo $idCL; echo "<br />\n3";
-    echo $idLoai; echo "<br />\n4";
-    echo $MoTa; echo "<br />\n5";
-    echo $Gia; echo "<br />\n6";
-    echo $urlHinh; echo "<br />n7";
-    echo $BaiViet; echo "<br />\n8";
-    echo $GhiChu; echo "<br />\n9";
-    echo $SoLuongTon; echo "<br />\n10";
-    echo $AnHien; echo "<br />\n11";
-    echo $Ngay; echo "<br />\n12";
+  // $idSP=$_GET['idSP'];
+  // $TenSP = $_POST["TenSP"];
+  // $idCL = $_POST["ChungLoai"];
+  // $idLoai = $_POST["LoaiSP"];
+  // $MoTa = $_POST["MoTa"];
+  // $Gia = $_POST["Gia"];
+  // $urlHinh = $_POST["urlHinh"];
+  // $BaiViet = $_POST["BaiViet"];
+  // $GhiChu = $_POST["GhiChu"];
+  // $SoLuongTon = $_POST["SoLuongTon"];
+  // $AnHien = $_POST["AnHien"];
+  // $Ngay=$_POST["NgayCapNhat"];
+  // $Ngay_arr = explode("/",$Ngay); // array(17,11,2010)
+  //   $d = $Ngay_arr[0]; //17
+  //   $m = $Ngay_arr[1]; //11
+  //   $y = $Ngay_arr[2]; //2010
+  //   if (checkdate($m,$d,$y)==false) $Ngay = date("Y-m-d");
+  //   else $Ngay = $y."-".$m."-".$d;
+  //   echo $idSP ; echo "<br />\n1";
+  //   echo $TenSP; echo "<br />\n2";
+  //   echo $idCL; echo "<br />\n3";
+  //   echo $idLoai; echo "<br />\n4";
+  //   echo $MoTa; echo "<br />\n5";
+  //   echo $Gia; echo "<br />\n6";
+  //   echo $urlHinh; echo "<br />n7";
+  //   echo $BaiViet; echo "<br />\n8";
+  //   echo $GhiChu; echo "<br />\n9";
+  //   echo $SoLuongTon; echo "<br />\n10";
+  //   echo $AnHien; echo "<br />\n11";
+  //   echo $Ngay; echo "<br />\n12";
 
     // header("location:sanpham_xemds.php"); 
 } 
@@ -98,7 +99,8 @@ function GanLoaiTin(){
 <form id="form1" name="form1" method="post" action=""> 
   <table width="100%" border="1" align="center"> 
     <tr> 
-      <td height="38" colspan="2" align="center" bgcolor="#0033FF"><p class="style1">        THÊM SẢN PHẨM</p> 
+      <a href='admin_chitiet.php'>back to main</a>
+      <td height="38" colspan="2" align="center" bgcolor="#0033FF"><p class="style1">        Chỉnh SẢN PHẨM</p> 
       </td> 
     </tr> 
     <tr> 

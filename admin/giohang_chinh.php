@@ -25,6 +25,7 @@ if(isset($_POST['btnChinh'])==true){
 </head>
 
 <body>
+  <a href='admin_chitiet.php'>back to main</a>
 <form id="form1" name="form1" method="post" action="">
   <table width="550" border="1" align="center">
     <tr>
