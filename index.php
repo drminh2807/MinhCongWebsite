@@ -145,38 +145,6 @@ http://www.skype.com/go/skypebuttons
 
 </div>
 <div id="right">
-
-  <!-- ĐĂNG NHẬP -->
-  <div id="dangnhap">
-    <div> </div>
-    <?php if(isset($_SESSION['kt_login_id'])){ ?>
-      <br> Chào mừng <span style="color:red"><?php echo $_SESSION['kt_HoTen']; ?></span>
-      <br><br><a style="color:blue" href='thoat.php'>Đăng xuất</a>
-      <?php } else { ?>
-
-        <fieldset> <form action="" method="post" name="dangnhap" id="dangnhap">
-          <label><span class="text"><em>Username 
-          </em></span>
-          <input onclick="if (this.value=='... Nhập Username ...') value=''" onblur="if (this.value=='')value='... Nhập Username ...'"  name="u" type="text" class="field" id="u" value="... Nhập Username ..." />
-        </label>
-        <br />
-        <label><span class="text"><em>Password
-        </em></span>
-        <input onclick="if (this.value=='123456') value=''" onblur="if (this.value=='')value='123456'" name="p" type="password" class="field" id="p" value="123456" />
-        <br />
-        <input type="submit" name="login" id="login" value="Login" />
-        <br />
-        <span class="atin">Đăng Ký</span><br />
-        <a href="trangchu.php?p=quenmatkhau" class="atin">Quên mật khẩu ???</a><br />
-        <br />
-      </label>
-    </form>  </fieldset>
-    <?php } ?>
-    
-
-  </div>
-  <!-- //ĐĂNG NHẬP --> 
-  <br />
   <!-- GIỎ HÀNG -->
   <div id="giohang">
     <div></div>
