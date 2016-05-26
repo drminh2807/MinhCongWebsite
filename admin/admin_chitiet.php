@@ -46,6 +46,7 @@ if (session_status() == PHP_SESSION_NONE || session_id() == '')
 					<option value="1" > Sản phẩm </option>
 					<option value="2"> Loại sản phẩm </option>
 					<option value="3"> Chủng loại </option>
+					<option value="4"> Giỏ hàng </option>
 				</select>
 				
 				<input type="submit" name="Submit" id="Submit" value="Xem danh sách" >
@@ -63,6 +64,8 @@ if (session_status() == PHP_SESSION_NONE || session_id() == '')
 							include 'loaisp_xemds.php'; 
 						else if ( $_POST['optionShow'] =='3' ) 
 							include 'chungloai_xemds.php'; 
+						else if ( $_POST['optionShow'] =='4' ) 
+							include 'giohang_xemds.php'; 
 						?>
 					</div>
 					

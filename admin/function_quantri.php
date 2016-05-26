@@ -172,13 +172,13 @@ function ChinhSanPham($idSP)
 	$GhiChu = $_POST["GhiChu"];
 	$SoLuongTon = $_POST["SoLuongTon"];
 	$AnHien = $_POST["AnHien"];
-	$Ngay=$_POST["NgayCapNhat"];
-	$Ngay_arr = explode("/",$Ngay); // array(17,11,2010)
-		$d = $Ngay_arr[0]; //17
-		$m = $Ngay_arr[1]; //11
-		$y = $Ngay_arr[2]; //2010
-		if (checkdate($m,$d,$y)==false) $Ngay = date("Y-m-d");
-		else $Ngay = $y."-".$m."-".$d;
+	// $Ngay=$_POST["NgayCapNhat"];
+	// $Ngay_arr = explode("/",$Ngay); // array(17,11,2010)
+	// 	$d = $Ngay_arr[0]; //17
+	// 	$m = $Ngay_arr[1]; //11
+	// 	$y = $Ngay_arr[2]; //2010
+	// 	if (checkdate($m,$d,$y)==false) $Ngay = date("Y-m-d");
+	// 	else $Ngay = $y."-".$m."-".$d;
 	settype($ChungLoai,"int");
 	settype($LoaiSP,"int");
 	settype($Gia,"int");
@@ -186,7 +186,8 @@ function ChinhSanPham($idSP)
 	settype($AnHien,"int");
 	settype($idSP,"int");
 	
-	$qr = "UPDATE sanpham set idLoai=$idLoai,idCL=$idCL,TenSP='$TenSP',MoTa='$MoTa',NgayCapNhat='$Ngay',Gia=$Gia,UrlHinh='$urlHinh',baiviet='$BaiViet',SoLuongTonKho=$SoLuongTon,GhiChu='$GhiChu',AnHien=$AnHien where idSP=$idSP";
+	$qr = "UPDATE sanpham set idLoai=$idLoai,idCL=$idCL,TenSP='$TenSP',MoTa='$MoTa',
+	NgayCapNhat='$Ngay',Gia=$Gia,UrlHinh='$urlHinh',baiviet='$BaiViet',SoLuongTonKho=$SoLuongTon,GhiChu='$GhiChu',AnHien=$AnHien where idSP=$idSP";
 	mysql_query($qr);
 }
 function ChiTietSanPham($idSP) 
